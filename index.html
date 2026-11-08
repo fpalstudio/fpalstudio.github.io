@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メモコンシェルジュ™ (MemoConcierge™) 公式サポート・法務情報 | FpalStudio™</title>
+  <style>
+    :root {
+      --primary: #1a73e8;
+      --text: #202124;
+      --muted: #5f6368;
+      --bg: #f8f9fa;
+      --card: #ffffff;
+      --border: #dadce0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans JP", sans-serif;
+      color: var(--text);
+      background-color: var(--bg);
+      line-height: 1.75;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 16px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 {
+      margin: 0 0 8px 0;
+      font-size: 1.35rem;
+    }
+    header p {
+      margin: 0 0 12px 0;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      padding: 4px 12px;
+      border-radius: 16px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .nav-links a:hover {
+      background-color: var(--primary);
+      color: #fff;
+    }
+    main {
+      max-width: 860px;
+      margin: 24px auto;
+      padding: 0 16px;
+    }
+    section {
+      background-color: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      scroll-margin-top: 140px;
+    }
+    h2 {
+      margin-top: 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--primary);
+      font-size: 1.25rem;
+    }
+    h3 {
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+    p, ul, ol {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 0.95rem;
+    }
+    ul, ol {
+      padding-left: 22px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 16px 0;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f1f3f4;
+      width: 30%;
+      font-weight: 600;
+    }
+    .notice-box {
+      background-color: #fff8e1;
+      border-left: 4px solid #fbbc04;
+      padding: 12px 16px;
+      margin: 12px 0;
+      font-size: 0.92rem;
+    }
+    .btn-link {
+      display: inline-block;
+      background-color: var(--primary);
+      color: #fff !important;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 600;
+      margin-top: 6px;
+    }
+    footer {
+      text-align: center;
+      padding: 32px 16px;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+      background-color: var(--card);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>メモコンシェルジュ™ / MemoConcierge™</h1>
+  <p>Provided by FpalStudio™</p>
+  <nav class="nav-links">
+    <a href="#privacy-ja">プライバシーポリシー</a>
+    <a href="#terms-ja">利用規約</a>
+    <a href="#tokushoho-ja">特定商取引法に基づく表記</a>
+    <a href="#privacy-en">Privacy Policy (EN)</a>
+    <a href="#terms-en">Terms of Service (EN)</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ==================== 日本語：プライバシーポリシー ==================== -->
+  <section id="privacy-ja">
+    <h2>プライバシーポリシー（日本語）</h2>
+    <p>FpalStudio™（以下「当方」といいます）は、当方が提供するAndroidアプリケーション「メモコンシェルジュ™」（英語名称：MemoConcierge™、以下「本アプリ」といいます）におけるユーザー情報の取り扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」といいます）を定めます。</p>
+
+    <h3>1. 取得する情報および利用目的</h3>
+    <ul>
+      <li><strong>AI機能利用時に入力・選択されたテキストおよび画像データ：</strong><br>
+        本アプリのAI処理機能（文章の校正・要約・プロンプト加工、共有テキスト翻訳、画像からのテキスト抽出等）を実行する際、ユーザーが対象として選択・送信したテキストデータまたは画像データを、Google LLCが提供する生成AI API（Gemini API）へ暗号化通信（HTTPS）を通じて送信します。これらのデータはAI処理結果の生成および返却のみを目的として使用され、当方の独自サーバーに保存・蓄積されることはありません。また、有料API環境（Pay-as-you-go）を利用しており、送信データがGoogleのAIモデルの学習（トレーニング）に使用されることはありません。</li>
+      <li><strong>音声読み上げ（TTS）利用時のテキストデータ：</strong><br>
+        端末標準の音声合成エンジン（Android TextToSpeech）等を通じて端末内で音声読み上げ処理を行うために使用されます。</li>
+      <li><strong>広告配信に伴う識別子（広告ID等）：</strong><br>
+        本アプリでは広告配信のためGoogle AdMobを利用しています。Google AdMobは、適切な広告表示および不正防止のため、端末の広告ID（Advertising ID）、おおよその位置情報、アプリの操作履歴・クラッシュ情報等を自動取得する場合があります。詳細は <a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener">Google の広告に関するポリシー</a> をご参照ください。</li>
+      <li><strong>アプリ内課金・購入履歴情報：</strong><br>
+        Google Play Billing APIを通じて、定期購入プランの契約状態やアプリ内通貨「ベル（🔔）」の購入・付与状態を照会・管理します。クレジットカード番号等の決済情報はGoogle Playが直接管理し、当方が取得・保持することはありません。</li>
+      <li><strong>お問い合わせ時に提供される情報：</strong><br>
+        サポート連絡や特定商取引法に基づく開示請求フォーム等を通じてユーザーが任意に送信した氏名、メールアドレス、注文番号、お問い合わせ内容等は、本人確認および回答対応のためにのみ利用します。</li>
+    </ul>
+
+    <h3>2. データの保存先と管理</h3>
+    <p>ユーザーが本アプリ内で作成したメモデータ、ならびにアプリ内通貨「ベル」の保有残高・有効期限ロット情報等は、原則としてユーザーの端末内（ローカルストレージ）に保存されます。アプリのアンインストールや「ストレージを消去」を実行した場合、端末内のメモデータおよび保有ベルは消去され復元できませんのでご注意ください。</p>
+
+    <h3>3. 第三者提供</h3>
+    <p>当方は、上記1に記載した外部サービス（Google Gemini API、Google AdMob、Google Play Billing）へのAPI連携に伴う送信、または法令に基づく正当な開示要請がある場合を除き、ユーザーの同意なく個人情報を第三者に提供することはありません。</p>
+
+    <h3>4. プライバシーポリシーの変更</h3>
+    <p>当方は、法令の改正や本アプリの機能変更に応じて本ポリシーを改定することがあります。重要な変更がある場合は本ページへの掲載をもって公表いたします。</p>
+
+    <h3>5. お問い合わせ窓口</h3>
+    <p>本ポリシーに関するお問い合わせは、以下のメールアドレスまでご連絡ください。<br>
+    事業者名：FpalStudio™<br>
+    連絡先メールアドレス：<a href="mailto:fpalstudio@gmail.com">fpalstudio@gmail.com</a></p>
+  </section>
+
+  <!-- ==================== 日本語：利用規約 ==================== -->
+  <section id="terms-ja">
+    <h2>利用規約・資金決済法に基づく表示（日本語）</h2>
+    <p>この利用規約（以下「本規約」といいます）は、FpalStudio™（以下「当方」といいます）が提供するアプリケーション「メモコンシェルジュ™」（英語名称：MemoConcierge™、以下「本アプリ」といいます）の利用条件を定めるものです。ユーザーは本規約に同意のうえ本アプリを利用するものとします。</p>
+
+    <h3>第1条（アプリ内通貨「ベル」の仕様と有効期限・所持上限）</h3>
+    <ol>
+      <li><strong>名称および単位：</strong>本アプリ内で利用できるアプリ内通貨の名称は「ベル（Bell / Bells、記号：🔔）」とし、最小消費単位は10ベルとします。</li>
+      <li><strong>有効期限（180日統一ルール・資金決済法対応）：</strong><br>
+        <strong>有償取得分（単発買い切り購入分、プラン契約者向け追加購入分、月額プランの月次付与分）および無償取得分（動画リワード広告の視聴報酬分等）を問わず、獲得・購入したすべてのベルの有効期限は、それぞれの獲得・購入日から起算して「180日間」とします。</strong><br>
+        ベルを消費する際は、有効期限が近いものから順番に（先入れ先出し方式で）自動的に消費されます（有効期限が同日の場合は、内部的に無償取得ベルから優先して消費されます）。<strong>獲得・購入日から180日を経過したベルは自動的に消滅し、いかなる理由があっても返金・再付与・補償は行われません。</strong>なお、本アプリのベルは発行日から6ヶ月（180日）以内に限り使用可能であるため、資金決済に関する法律第4条第2号に基づき「前払式支払手段」の適用除外となります。</li>
+      <li><strong>所持上限（保有上限）：</strong><br>
+        <ul>
+          <li>単発ベル（買い切りパック・追加ベルパック）を購入できる所持上限は <strong>100,000ベル</strong> です（現在の所持ベルが99,999ベル以下の場合に限り最大6,000ベルパックまで購入可能であり、単発購入直後の最大到達値は105,999ベルとなります。100,000ベル以上を所持している状態では単発ベルの追加購入はできません）。</li>
+          <li>月額定期購入プランによる自動付与分等を含めたシステム上の最大保持上限は <strong>9,999,999ベル</strong> とし、これを超えるベルは保持できません。</li>
+        </ul>
+      </li>
+      <li><strong>無償ベルの獲得条件：</strong><br>
+        ベルチャージ画面における動画リワード広告視聴（1回視聴につき10ベル付与）は、1日あたり20回まで、かつ現在の所持ベルが200ベル未満の場合に限り利用可能です（なお、音声読み上げダイアログからの動画広告視聴による一時利用解放については、ベル所持数や回数制限なく視聴可能です）。また、30ベルを消費することでバナー広告を24時間非表示にすることができます。</li>
+    </ol>
+
+    <h3>第2条（AI処理機能におけるベル消費方式と中断時の不返還規定）</h3>
+    <div class="notice-box">
+      <strong>【重要：通信切断・タスクキル・バックグラウンド移行時のベル不返還について】</strong><br>
+      AI処理に伴うAPI通信コストの発生を防ぐため、以下のとおりベルの消費および不返還ルールが適用されます。あらかじめご了承のうえ実行してください。
+    </div>
+    <ol>
+      <li><strong>AI一括処理（校正・要約・プロンプト加工）および共有テキスト翻訳（事前即時消費方式）：</strong><br>
+        これらの機能は、AIサーバー（API）へリクエストを送信する直前に所定量のベルを即時消費します。</li>
+      <li><strong>画像からのテキスト抽出（仮消費・差額返還方式）：</strong><br>
+        処理開始時に最大想定量のベルを一旦「仮消費」し、抽出完了後に実際に抽出された文字量に応じた消費ベル数を確定させ、差額を元の有効期限ロットへ返還します。なお、画像内に文字が検出されなかった場合（0文字）や抽出結果が空であった場合でも、画像解析処理の実行対価として<strong>最低10ベル</strong>が消費されます。</li>
+      <li><strong>処理中断・失敗時のベル不返還ルール：</strong><br>
+        上記1および2のいずれの処理においても、<strong>処理の実行中にユーザーがアプリをバックグラウンドへ移行させた場合、アプリを終了（タスクキル・強制停止）した場合、端末の電源オフやバッテリー切れ、通信環境の切断・不安定化、タイムアウト、OS側のメモリ解放等により処理が中断または失敗した場合、すでに消費または仮消費されたベルは一切返還されません。</strong></li>
+    </ol>
+
+    <h3>第3条（定期購入プランおよびアプリ内課金アイテム）</h3>
+    <ol>
+      <li><strong>価格および内容：</strong>本アプリで提供する定期購入プラン（2種）および単発購入ベル（9種）の内容・価格は以下のとおりです（米国ドル価格は米国ストアでの基準価格であり、税金や為替設定により変動する場合があります）。
+        <table>
+          <thead>
+            <tr>
+              <th>区分</th>
+              <th>商品名・プラン内容</th>
+              <th>日本価格 (税込)</th>
+              <th>米国価格 (USD)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>定期購入</td>
+              <td><strong>スタンダードプラン</strong><br>（毎月1,000ベル付与・バナー広告常時非表示・音声読み上げ無制限・限定価格での追加ベル購入権）</td>
+              <td>月額 390円</td>
+              <td>$2.99 / month</td>
+            </tr>
+            <tr>
+              <td>定期購入</td>
+              <td><strong>プロプラン</strong><br>（毎月4,000ベル付与・バナー広告常時非表示・音声読み上げ無制限・プロ限定価格での追加ベル購入権）</td>
+              <td>月額 980円</td>
+              <td>$6.99 / month</td>
+            </tr>
+            <tr>
+              <td>単発購入（一般）</td>
+              <td>買い切りベル：1,000ベル / 3,000ベル / 6,000ベル<br>（※定期購入プラン契約中は非表示または購入対象外となります）</td>
+              <td>450円 / 1,200円 / 1,980円</td>
+              <td>$3.49 / $8.99 / $14.99</td>
+            </tr>
+            <tr>
+              <td>単発購入（スタンダード限定）</td>
+              <td>スタンダード限定追加ベル：1,000ベル / 3,000ベル / 6,000ベル<br>（※スタンダードプラン契約者のみ購入可能）</td>
+              <td>360円 / 960円 / 1,500円</td>
+              <td>$2.49 / $6.99 / $10.99</td>
+            </tr>
+            <tr>
+              <td>単発購入（プロ限定）</td>
+              <td>プロ限定追加ベル：1,000ベル / 3,000ベル / 6,000ベル<br>（※プロプラン契約者のみ購入可能）</td>
+              <td>290円 / 750円 / 1,180円</td>
+              <td>$1.99 / $5.49 / $8.49</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li><strong>定期購入の自動更新と解約：</strong>定期購入プランは1ヶ月ごとの自動更新となります。更新日の24時間前までにGoogle Playストアの「定期購入」管理画面から解約手続きを行わない限り自動的に更新・課金されます。アプリをアンインストールしただけでは定期購入は解約されませんのでご注意ください。</li>
+      <li><strong>返品・返金不可：</strong>デジタルコンテンツの性質上、法令により義務付けられる場合を除き、購入完了後のキャンセル・返品・返金・換金には一切応じられません。</li>
+    </ol>
+
+    <h3>第4条（免責事項および知的財産権）</h3>
+    <ol>
+      <li>本アプリのAI機能による生成結果（校正・要約・加工・翻訳・画像文字抽出等）は外部AIモデルによる自動生成であり、その正確性、完全性、有用性を保証するものではありません。重要な文書については必ずユーザーご自身の責任において確認を行ってください。</li>
+      <li>本アプリの利用、データの消失、通信障害、AI生成結果の利用等によりユーザーまたは第三者に生じた損害について、当方に故意または重過失がある場合を除き、当方は責任を負いません。万一当方が損害賠償責任を負う場合であっても、その賠償額は当該損害が発生した月にユーザーが本アプリに対して実際に支払った利用料金の総額を上限とします。</li>
+      <li>本アプリに関する著作権、商標権その他の知的財産権はすべてFpalStudio™に帰属します。「メモコンシェルジュ™」「MemoConcierge™」および「FpalStudio™」は当方の商標またはトレードマークであり、「© 2026 FpalStudio」として保護されます。</li>
+      <li>本規約は日本法を準拠法とし、本アプリに関連して紛争が生じた場合は、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</li>
+    </ol>
+  </section>
+
+  <!-- ==================== 日本語：特定商取引法に基づく表記 ==================== -->
+  <section id="tokushoho-ja">
+    <h2>特定商取引法に基づく表記（日本語）</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th>販売事業者名</th>
+          <td>FpalStudio™（エフパルスタジオ）</td>
+        </tr>
+        <tr>
+          <th>運営統括責任者・所在地・電話番号</th>
+          <td>
+            消費者庁の特定商取引法ガイドラインに基づき、請求があった場合には遅滞なく電子メールにて開示いたします。<br>
+            お取引（有償課金）を行われたお客様、または正当な権利行使を目的とされるご本人様からの開示請求は、以下の専用フォームよりお申し出ください。<br>
+            <a class="btn-link" href="https://forms.gle/Byb7C2mEvL2QeXJCA" target="_blank" rel="noopener">特定商取引法に基づく開示請求フォームを開く</a>
+          </td>
+        </tr>
+        <tr>
+          <th>連絡先メールアドレス</th>
+          <td><a href="mailto:fpalstudio@gmail.com">fpalstudio@gmail.com</a><br>（※お問い合わせは原則としてメールにて承っております）</td>
+        </tr>
+        <tr>
+          <th>販売価格</th>
+          <td>購入手続き画面（Google Play決済画面）および上記「利用規約 第3条」に表示される金額（表示価格は消費税込みの総額表示です）。</td>
+        </tr>
+        <tr>
+          <th>商品代金以外の必要料金</th>
+          <td>アプリのダウンロード、AI機能の利用、広告視聴等に伴うインターネット通信料（お客様のご負担となります）。</td>
+        </tr>
+        <tr>
+          <th>お支払い方法・時期</th>
+          <td>Google Playが定める決済方法（クレジットカード、キャリア決済、Google Play残高等）により、購入確定時に即時決済されます（定期購入プランは毎月自動更新時に決済されます）。</td>
+        </tr>
+        <tr>
+          <th>商品の引渡時期</th>
+          <td>決済完了後、ただちにアプリ内でベルの付与または定期購入プラン特典が適用されます。</td>
+        </tr>
+        <tr>
+          <th>返品・キャンセルについて</th>
+          <td>デジタルコンテンツおよびアプリ内サービスの性質上、購入手続完了後のお客様都合による返品・交換・キャンセル・返金はお受けできません。また、獲得・購入日から180日を経過したベル、ならびに処理中断時（タスクキル・バックグラウンド移行・通信切断等）に消費されたベルの返還・返金はいたしかねます。</td>
+        </tr>
+        <tr>
+          <th>動作環境</th>
+          <td>Android OS搭載スマートフォン（対象OSバージョンはGoogle Playストアの本アプリ掲載ページに記載の要件に準じます）。</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ==================== ENGLISH: Privacy Policy ==================== -->
+  <section id="privacy-en" lang="en">
+    <h2>Privacy Policy (English)</h2>
+    <p>FpalStudio™ ("we," "us," or "our") sets forth this Privacy Policy regarding the handling of user information in the Android application "MemoConcierge™" (Japanese name: メモコンシェルジュ™, the "App").</p>
+
+    <h3>1. Information We Process and Purpose of Use</h3>
+    <ul>
+      <li><strong>Text and Image Data Submitted for AI Features:</strong><br>
+        When you use the AI processing features of the App (such as text proofreading, summarization, prompt processing, shared text translation, or image text extraction / OCR), the text or image data you select is transmitted via encrypted communication (HTTPS) to the Google Gemini API provided by Google LLC solely to generate and return the requested AI output. We do not store your memo texts or images on our own servers. Furthermore, because the App utilizes a paid Google Cloud / Gemini API billing tier, your submitted data is not used by Google to train its AI models.</li>
+      <li><strong>Advertising IDs and Device Information (Google AdMob):</strong><br>
+        We use Google AdMob to display banner and rewarded video advertisements. AdMob may automatically collect your device's Advertising ID, approximate location, and app interaction/crash data for ad delivery and fraud prevention. Please refer to <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's Advertising Privacy & Terms</a> for details.</li>
+      <li><strong>In-App Purchase and Subscription Status:</strong><br>
+        We use the Google Play Billing API to verify subscription status and manage in-app currency ("Bells" 🔔). Payment credentials are processed directly by Google Play and are never accessed or stored by us.</li>
+    </ul>
+
+    <h3>2. Local Data Storage</h3>
+    <p>Your memos and in-app currency ("Bells") balance and expiration lot records are stored locally on your device. Please note that uninstalling the App or clearing the App's storage in your device settings will permanently delete your local memos and remaining Bells.</p>
+
+    <h3>3. Contact Us</h3>
+    <p>If you have any questions regarding this Privacy Policy, please contact us at:<br>
+    Developer: FpalStudio™<br>
+    Email: <a href="mailto:fpalstudio@gmail.com">fpalstudio@gmail.com</a></p>
+  </section>
+
+  <!-- ==================== ENGLISH: Terms of Service ==================== -->
+  <section id="terms-en" lang="en">
+    <h2>Terms of Service (English)</h2>
+    <p>These Terms of Service ("Terms") govern your use of the application "MemoConcierge™" (Japanese name: メモコンシェルジュ™, the "App") provided by FpalStudio™ ("we," "us," or "our"). By using the App, you agree to these Terms.</p>
+
+    <h3>1. In-App Currency ("Bells" 🔔), 180-Day Expiration, and Holding Limits</h3>
+    <ol>
+      <li><strong>Unit and Usage:</strong> The in-app currency used within the App is called "Bells" (minimum consumption unit: 10 Bells). Watching a rewarded video ad grants 10 Bells (on the charge screen, limited to 20 times per day and available only when holding fewer than 200 Bells; rewarded video viewing from the Text-to-Speech dialog is available at any time without balance or daily limits). Consuming 30 Bells hides banner ads for 24 hours.</li>
+      <li><strong>180-Day Expiration Rule (All Bells):</strong><br>
+        <strong>All Bells—whether acquired through paid purchases (one-time packs, subscriber add-on packs, or monthly subscription grants) or obtained for free (via rewarded video ads)—expire strictly 180 days from the date of acquisition or purchase.</strong><br>
+        Bells are consumed on a First-In, First-Out (FIFO) basis starting from those with the earliest expiration date (if expiration dates are identical, free Bells are consumed first internally). <strong>Any Bells that pass their 180-day expiration date are automatically deleted and cannot be refunded, restored, or compensated under any circumstances.</strong></li>
+      <li><strong>Holding Limits:</strong><br>
+        The maximum balance eligible for purchasing one-time Bell packs is <strong>100,000 Bells</strong> (users holding 99,999 Bells or fewer may purchase up to a 6,000-Bell pack, reaching up to 105,999 Bells; additional one-time purchases are disabled while holding 100,000 Bells or more). The absolute system holding cap, including monthly subscription grants, is <strong>9,999,999 Bells</strong>.</li>
+    </ol>
+
+    <h3>2. Bell Consumption and Non-Refund Policy Upon Interruption</h3>
+    <div class="notice-box">
+      <strong>[Important: No Refund of Bells on Task-Kill, Backgrounding, or Disconnection]</strong>
+    </div>
+    <ol>
+      <li><strong>AI Text Processing & Translation (Immediate Pre-Consumption):</strong><br>
+        For AI batch processing (proofreading, summarization, prompt processing) and shared text translation, the required Bells are consumed immediately prior to sending the API request.</li>
+      <li><strong>Image Text Extraction / OCR (Provisional Consumption & Difference Refund):</strong><br>
+        At the start of image text extraction, the maximum estimated Bells are provisionally deducted. Upon completion, the actual Bell cost based on the extracted character count is finalized and any surplus Bells are refunded to their original expiration lot. Even if no text (0 characters) is detected in the image, a <strong>minimum of 10 Bells</strong> is consumed to cover the image analysis processing.</li>
+      <li><strong>No Refund Upon Interruption or Failure:</strong><br>
+        In any of the processes above, <strong>if the process fails or is interrupted because the App moves to the background, the App is closed or force-stopped (task-killed), the device powers off, or network connectivity is lost or unstable during execution, any consumed or provisionally consumed Bells will NOT be refunded.</strong></li>
+    </ol>
+
+    <h3>3. Subscriptions, Pricing, and No Refunds</h3>
+    <ol>
+      <li><strong>Products and Pricing (US / JP):</strong>
+        <ul>
+          <li><strong>Standard Plan (Monthly Subscription):</strong> $2.99/month (¥390/month) — Includes 1,000 Bells/month, permanent banner ad removal, unlimited Text-to-Speech (TTS), and access to discounted Standard add-on Bell packs ($2.49 for 1,000 Bells / $6.99 for 3,000 Bells / $10.99 for 6,000 Bells).</li>
+          <li><strong>Pro Plan (Monthly Subscription):</strong> $6.99/month (¥980/month) — Includes 4,000 Bells/month, permanent banner ad removal, unlimited TTS, and access to discounted Pro add-on Bell packs ($1.99 for 1,000 Bells / $5.49 for 3,000 Bells / $8.49 for 6,000 Bells).</li>
+          <li><strong>Standard One-Time Bell Packs (For non-subscribers):</strong> $3.49 (1,000 Bells) / $8.99 (3,000 Bells) / $14.99 (6,000 Bells).</li>
+        </ul>
+      </li>
+      <li><strong>Auto-Renewal and Cancellation:</strong> Subscriptions automatically renew each month unless canceled at least 24 hours before the renewal date via your Google Play Store account settings. Uninstalling the App does not cancel an active subscription.</li>
+      <li><strong>All Sales Final:</strong> Except as required by applicable law, all purchases of subscriptions and Bell packs are final and non-refundable.</li>
+    </ol>
+
+    <h3>4. Disclaimer of Warranties and Intellectual Property</h3>
+    <ol>
+      <li>AI-generated outputs are provided "AS IS" without warranties of accuracy or completeness. Please verify important content independently.</li>
+      <li>All intellectual property rights in the App belong to FpalStudio™. "MemoConcierge™", "メモコンシェルジュ™", and "FpalStudio™" are trademarks of FpalStudio™.</li>
+      <li>These Terms are governed by the laws of Japan, and the Tokyo District Court shall have exclusive jurisdiction over any disputes arising out of or relating to the App.</li>
+    </ol>
+  </section>
+
+</main>
+
+<footer>
+  <p><strong>メモコンシェルジュ™ / MemoConcierge™</strong> — Provided by <strong>FpalStudio™</strong></p>
+  <p>© 2026 FpalStudio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
