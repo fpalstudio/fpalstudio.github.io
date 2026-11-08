@@ -159,19 +159,21 @@
     <h3>1. 取得する情報および利用目的</h3>
     <ul>
       <li><strong>AI機能利用時に入力・選択されたテキストおよび画像データ：</strong><br>
-        本アプリのAI処理機能（文章の校正・要約・プロンプト加工、共有テキスト翻訳、画像からのテキスト抽出等）を実行する際、ユーザーが対象として選択・送信したテキストデータまたは画像データを、Google LLCが提供する生成AI API（Gemini API）へ暗号化通信（HTTPS）を通じて送信します。これらのデータはAI処理結果の生成および返却のみを目的として使用され、当方の独自サーバーに保存・蓄積されることはありません。また、有料API環境（Pay-as-you-go）を利用しており、送信データがGoogleのAIモデルの学習（トレーニング）に使用されることはありません。</li>
-      <li><strong>音声読み上げ（TTS）利用時のテキストデータ：</strong><br>
-        端末標準の音声合成エンジン（Android TextToSpeech）等を通じて端末内で音声読み上げ処理を行うために使用されます。</li>
+        本アプリのAI処理機能（文章の校正・要約・プロンプト加工、共有テキスト翻訳、画像からのテキスト抽出・画像描写等）を実行する際、ユーザーが対象として選択・送信したテキストデータまたは画像データを、Google LLCが提供する生成AI API（Google Gemini API）へ暗号化通信（HTTPS）を通じて送信します。これらのデータはAI処理結果の生成および返却のみを目的として使用され、当方の独自サーバーに保存・蓄積されることはありません。また、有料API環境（Pay-as-you-go）を利用しており、送信データがGoogleのAIモデルの学習（トレーニング）に使用されることはありません。</li>
+      <li><strong>位置情報（「現在情報挿入」機能利用時のみ）：</strong><br>
+        ユーザーが「現在情報挿入」機能において「現在位置の住所」「現在位置の座標」「GoogleMAPリンク」の挿入を選択し、手動で実行ボタンを押した場合に限り、端末の位置情報（GPS等）およびOS標準のジオコーダー機能を使用して現在位置を取得し、編集中のメモテキスト内へ挿入します。位置情報はユーザーがボタンを押した瞬間のテキスト挿入処理のみに端末内で使用され、バックグラウンドでの追跡や、当方のサーバーおよび広告目的での外部送信・収集は一切行いません。</li>
+      <li><strong>音声読み上げ（TTS）および生体認証・画面ロック認証：</strong><br>
+        音声読み上げ機能は端末標準の音声合成エンジン（Android TextToSpeech）を使用して端末内で処理されます。また、履歴の全削除時等の本人確認にはAndroid OS標準の認証機能（BiometricPrompt）を使用しており、生体情報やパスコード等を当方が取得・保持することはありません。</li>
       <li><strong>広告配信に伴う識別子（広告ID等）：</strong><br>
         本アプリでは広告配信のためGoogle AdMobを利用しています。Google AdMobは、適切な広告表示および不正防止のため、端末の広告ID（Advertising ID）、おおよその位置情報、アプリの操作履歴・クラッシュ情報等を自動取得する場合があります。詳細は <a href="https://policies.google.com/technologies/ads?hl=ja" target="_blank" rel="noopener">Google の広告に関するポリシー</a> をご参照ください。</li>
       <li><strong>アプリ内課金・購入履歴情報：</strong><br>
         Google Play Billing APIを通じて、定期購入プランの契約状態やアプリ内通貨「ベル（🔔）」の購入・付与状態を照会・管理します。クレジットカード番号等の決済情報はGoogle Playが直接管理し、当方が取得・保持することはありません。</li>
       <li><strong>お問い合わせ時に提供される情報：</strong><br>
-        サポート連絡や特定商取引法に基づく開示請求フォーム等を通じてユーザーが任意に送信した氏名、メールアドレス、注文番号、お問い合わせ内容等は、本人確認および回答対応のためにのみ利用します。</li>
+        サポート連絡や特定商取引法に基づく開示請求フォーム等を通じてユーザーが送信した氏名、住所、電話番号、メールアドレス、注文番号、お問い合わせ内容等は、本人確認および回答対応のためにのみ利用します。</li>
     </ul>
 
-    <h3>2. データの保存先と管理</h3>
-    <p>ユーザーが本アプリ内で作成したメモデータ、ならびにアプリ内通貨「ベル」の保有残高・有効期限ロット情報等は、原則としてユーザーの端末内（ローカルストレージ）に保存されます。アプリのアンインストールや「ストレージを消去」を実行した場合、端末内のメモデータおよび保有ベルは消去され復元できませんのでご注意ください。</p>
+    <h3>2. データの保存先・バックアップと管理</h3>
+    <p>ユーザーが本アプリ内で作成したメモデータ、ならびにアプリ内通貨「ベル」の保有残高・有効期限ロット情報・しおり・履歴・設定データ等は、ユーザーの端末内（ローカルストレージ）に保存されます（ユーザーがAndroid OSの「Google バックアップ」機能を有効にしている場合は、機種変更時のデータ引き継ぎのためGoogleドライブ上のアプリ専用バックアップ領域に暗号化バックアップされる場合があります）。アプリのアンインストールや「ストレージを消去」を実行した場合、端末内のデータおよび保有ベルは消去されますのでご注意ください。</p>
 
     <h3>3. 第三者提供</h3>
     <p>当方は、上記1に記載した外部サービス（Google Gemini API、Google AdMob、Google Play Billing）へのAPI連携に伴う送信、または法令に基づく正当な開示要請がある場合を除き、ユーザーの同意なく個人情報を第三者に提供することはありません。</p>
@@ -188,41 +190,44 @@
   <!-- ==================== 日本語：利用規約 ==================== -->
   <section id="terms-ja">
     <h2>利用規約・資金決済法に基づく表示（日本語）</h2>
-    <p>この利用規約（以下「本規約」といいます）は、FpalStudio™（以下「当方」といいます）が提供するアプリケーション「メモコンシェルジュ™」（英語名称：MemoConcierge™、以下「本アプリ」といいます）の利用条件を定めるものです。ユーザーは本規約に同意のうえ本アプリを利用するものとします。</p>
+    <p>本利用規約（以下「本規約」といいます）は、FpalStudio™（以下「開発者」または「当方」といいます）が提供するアプリケーション「メモコンシェルジュ™ / MemoConcierge™」（以下「本アプリ」といいます）の利用条件を定めるものです。本アプリをご利用になるすべての方（以下「ユーザー」といいます）は、本規約に同意の上で本アプリをご利用ください。</p>
 
-    <h3>第1条（アプリ内通貨「ベル」の仕様と有効期限・所持上限）</h3>
+    <h3>第1条（本アプリの機能とデータ管理・自己責任）</h3>
     <ol>
-      <li><strong>名称および単位：</strong>本アプリ内で利用できるアプリ内通貨の名称は「ベル（Bell / Bells、記号：🔔）」とし、最小消費単位は10ベルとします。</li>
-      <li><strong>有効期限（180日統一ルール・資金決済法対応）：</strong><br>
-        <strong>有償取得分（単発買い切り購入分、プラン契約者向け追加購入分、月額プランの月次付与分）および無償取得分（動画リワード広告の視聴報酬分等）を問わず、獲得・購入したすべてのベルの有効期限は、それぞれの獲得・購入日から起算して「180日間」とします。</strong><br>
-        ベルを消費する際は、有効期限が近いものから順番に（先入れ先出し方式で）自動的に消費されます（有効期限が同日の場合は、内部的に無償取得ベルから優先して消費されます）。<strong>獲得・購入日から180日を経過したベルは自動的に消滅し、いかなる理由があっても返金・再付与・補償は行われません。</strong>なお、本アプリのベルは発行日から6ヶ月（180日）以内に限り使用可能であるため、資金決済に関する法律第4条第2号に基づき「前払式支払手段」の適用除外となります。</li>
-      <li><strong>所持上限（保有上限）：</strong><br>
+      <li>本アプリは、テキストファイルの閲覧・編集・保存、しおり・履歴管理、音声読み上げ（TTS）、現在情報挿入、および外部AI（人工知能）APIを利用したテキスト加工・翻訳・画像からの文字抽出等を行うツールとして、「現状有姿（AS-IS）」で提供されます。</li>
+      <li>端末のメモリ容量（RAM）の限界、OSによるプロセスの強制終了（タスクキル）、バッテリー切れ、ストレージの権限喪失や空き容量不足、文字コードの違い、または通信エラー等により、ファイルの一部が読み込めない場合（不完全な未保存ファイルとして開かれる場合を含みます）や、編集内容の保存・上書きが正常に行われない場合があります。</li>
+      <li>ユーザーは、重要なテキストデータやファイルについて、必ずユーザー自身の責任において定期的に別ファイルや外部ストレージ等へバックアップを行うものとします。</li>
+    </ol>
+
+    <h3>第2条（アプリ内通貨「ベル」の仕様と有効期限・所持上限）</h3>
+    <ol>
+      <li>本アプリでは、対象機能を利用するためのアプリ内単位として「ベル（Bell / Bells、記号：🔔）」（以下「ベル」といいます）を使用します（最小消費単位：10ベル）。各機能で消費するベル数、獲得できるベル数、ならびに1日あたりの獲得上限回数および所持上限数等の条件は、本規約および本アプリ内の各画面に表示される定めに従うものとします。</li>
+      <li><strong>ベルの取得方法と所持上限：</strong>
         <ul>
-          <li>単発ベル（買い切りパック・追加ベルパック）を購入できる所持上限は <strong>100,000ベル</strong> です（現在の所持ベルが99,999ベル以下の場合に限り最大6,000ベルパックまで購入可能であり、単発購入直後の最大到達値は105,999ベルとなります。100,000ベル以上を所持している状態では単発ベルの追加購入はできません）。</li>
-          <li>月額定期購入プランによる自動付与分等を含めたシステム上の最大保持上限は <strong>9,999,999ベル</strong> とし、これを超えるベルは保持できません。</li>
+          <li><strong>動画広告の視聴による無償獲得：</strong>1回視聴につき10ベルを獲得できます（「ベルの管理・チャージ」画面での視聴は1日20回まで、かつ所持ベルが200ベル未満の場合のみ利用可能です。なお、音声読み上げダイアログからの動画広告視聴による一時利用解放は、所持ベル数や回数制限なく常時視聴可能です）。</li>
+          <li><strong>買い切りベルまたは会員限定追加ベルの有償購入：</strong>単発購入が可能な所持上限は <strong>100,000ベル</strong> です（所持ベルが99,999ベル以下の場合に最大6,000ベルパックまで購入可能であり、単発購入直後の最大到達値は105,999ベルとなります。100,000ベル以上所持している場合は追加購入できません）。</li>
+          <li><strong>月額プラン（スタンダードプラン／プロプラン）の契約に伴う毎月付与：</strong>単発購入の上限（100,000ベル）を超えている場合でも、アプリ全体のシステム最大保持上限である <strong>9,999,999ベル</strong> に達するまで受け取り可能です。</li>
         </ul>
       </li>
-      <li><strong>無償ベルの獲得条件：</strong><br>
-        ベルチャージ画面における動画リワード広告視聴（1回視聴につき10ベル付与）は、1日あたり20回まで、かつ現在の所持ベルが200ベル未満の場合に限り利用可能です（なお、音声読み上げダイアログからの動画広告視聴による一時利用解放については、ベル所持数や回数制限なく視聴可能です）。また、30ベルを消費することでバナー広告を24時間非表示にすることができます。</li>
+      <li><strong>【有効期限（最重要・180日統一ルール）】：</strong><br>
+        <strong>獲得・購入・付与されたすべてのベル（有償購入分・月額プラン付与分・動画広告視聴による無償獲得分のすべてを含みます）の有効期限は、その獲得・購入・付与日から「180日間」です</strong>（日本の資金決済に関する法律第4条第2号における前払式支払手段の適用除外要件に基づき、180日を超える有効期限は設定されません。なお、月額プランの毎月の付与ベルについては、本アプリを起動して実際に受け取った日ではなく、Google Play上で各月の契約更新・決済が行われた日を起算日とします）。<strong>起算日から180日を経過したベルは自動的に失効・消滅し、いかなる理由があっても復活・返金・補償されません。</strong></li>
+      <li><strong>【消費順序】：</strong><br>
+        ベルを消費する際は、有効期限が最も近いベルから自動的に優先消費されます（先入れ先出し方式）。有効期限日が同一の有償ベルと無償ベルが混在している場合は、無償ベルから先に消費されます。</li>
+      <li><strong>【譲渡・払戻しの禁止およびデータ消失時の免責】：</strong><br>
+        法令により義務付けられる場合を除き、購入・獲得したベルの現金への換金、返金、払い戻し、および第三者や別アカウントへの譲渡はできません。また、本アプリのアンインストール、アプリデータの消去、端末の紛失・故障、またはOSのバックアップ機能を利用しない機種変更等により端末内のベル管理データが消失した場合、ベルの復元・再発行・返金はいたしかねます。</li>
     </ol>
 
-    <h3>第2条（AI処理機能におけるベル消費方式と中断時の不返還規定）</h3>
-    <div class="notice-box">
-      <strong>【重要：通信切断・タスクキル・バックグラウンド移行時のベル不返還について】</strong><br>
-      AI処理に伴うAPI通信コストの発生を防ぐため、以下のとおりベルの消費および不返還ルールが適用されます。あらかじめご了承のうえ実行してください。
-    </div>
+    <h3>第3条（月額プラン［定期購入］および課金アイテムの契約・更新・解約）</h3>
     <ol>
-      <li><strong>AI一括処理（校正・要約・プロンプト加工）および共有テキスト翻訳（事前即時消費方式）：</strong><br>
-        これらの機能は、AIサーバー（API）へリクエストを送信する直前に所定量のベルを即時消費します。</li>
-      <li><strong>画像からのテキスト抽出（仮消費・差額返還方式）：</strong><br>
-        処理開始時に最大想定量のベルを一旦「仮消費」し、抽出完了後に実際に抽出された文字量に応じた消費ベル数を確定させ、差額を元の有効期限ロットへ返還します。なお、画像内に文字が検出されなかった場合（0文字）や抽出結果が空であった場合でも、画像解析処理の実行対価として<strong>最低10ベル</strong>が消費されます。</li>
-      <li><strong>処理中断・失敗時のベル不返還ルール：</strong><br>
-        上記1および2のいずれの処理においても、<strong>処理の実行中にユーザーがアプリをバックグラウンドへ移行させた場合、アプリを終了（タスクキル・強制停止）した場合、端末の電源オフやバッテリー切れ、通信環境の切断・不安定化、タイムアウト、OS側のメモリ解放等により処理が中断または失敗した場合、すでに消費または仮消費されたベルは一切返還されません。</strong></li>
-    </ol>
-
-    <h3>第3条（定期購入プランおよびアプリ内課金アイテム）</h3>
-    <ol>
-      <li><strong>価格および内容：</strong>本アプリで提供する定期購入プラン（2種）および単発購入ベル（9種）の内容・価格は以下のとおりです（米国ドル価格は米国ストアでの基準価格であり、税金や為替設定により変動する場合があります）。
+      <li>月額プラン（スタンダードプラン／プロプラン）をご契約中の期間は、以下の特典が適用されます。
+        <ul>
+          <li>(1) トップ画面のバナー広告の常時非表示</li>
+          <li>(2) 音声読み上げ（TTS）機能の無制限利用（ベル消費および動画広告視聴なし）</li>
+          <li>(3) 毎月の契約更新完了に応じた、各プラン所定のベル数の付与（スタンダード：毎月1,000ベル ／ プロ：毎月4,000ベル）</li>
+          <li>(4) 会員限定価格での追加ベルパックの購入権</li>
+        </ul>
+      </li>
+      <li><strong>価格一覧（全11商品）：</strong>（米国ドル価格は米国ストアでの基準価格であり、税金や為替設定により変動する場合があります）
         <table>
           <thead>
             <tr>
@@ -235,19 +240,19 @@
           <tbody>
             <tr>
               <td>定期購入</td>
-              <td><strong>スタンダードプラン</strong><br>（毎月1,000ベル付与・バナー広告常時非表示・音声読み上げ無制限・限定価格での追加ベル購入権）</td>
+              <td><strong>スタンダードプラン</strong>（月1,000ベル付与＋上記特典）</td>
               <td>月額 390円</td>
               <td>$2.99 / month</td>
             </tr>
             <tr>
               <td>定期購入</td>
-              <td><strong>プロプラン</strong><br>（毎月4,000ベル付与・バナー広告常時非表示・音声読み上げ無制限・プロ限定価格での追加ベル購入権）</td>
+              <td><strong>プロプラン</strong>（月4,000ベル付与＋上記特典）</td>
               <td>月額 980円</td>
               <td>$6.99 / month</td>
             </tr>
             <tr>
               <td>単発購入（一般）</td>
-              <td>買い切りベル：1,000ベル / 3,000ベル / 6,000ベル<br>（※定期購入プラン契約中は非表示または購入対象外となります）</td>
+              <td>買い切りベル：1,000ベル / 3,000ベル / 6,000ベル<br>（※月額プラン契約中は非表示または購入対象外）</td>
               <td>450円 / 1,200円 / 1,980円</td>
               <td>$3.49 / $8.99 / $14.99</td>
             </tr>
@@ -266,17 +271,61 @@
           </tbody>
         </table>
       </li>
-      <li><strong>定期購入の自動更新と解約：</strong>定期購入プランは1ヶ月ごとの自動更新となります。更新日の24時間前までにGoogle Playストアの「定期購入」管理画面から解約手続きを行わない限り自動的に更新・課金されます。アプリをアンインストールしただけでは定期購入は解約されませんのでご注意ください。</li>
-      <li><strong>返品・返金不可：</strong>デジタルコンテンツの性質上、法令により義務付けられる場合を除き、購入完了後のキャンセル・返品・返金・換金には一切応じられません。</li>
+      <li>定期購入の決済および自動更新は、Google Playの決済システムを通じて行われます。契約期間が終了する24時間前までにGoogle Play上で解約手続きが行われない限り、契約は毎月自動的に更新され、月額料金が請求されます。</li>
+      <li><strong>【未解約に関する重要事項】：</strong><br>
+        本アプリを端末からアンインストールした場合や、端末の故障・紛失・電池切れ・長期の通信不能（海外渡航や圏外等）により本アプリを起動・利用しなかった期間であっても、定期購入は自動的には解約されません。解約を希望される場合は、必ずユーザーご自身でGoogle Playの「定期購入」管理画面（PCや別端末のWebブラウザ等からもログインして手続き可能です）から解約手続きを行ってください。未利用期間分の料金の返金はいたしかねます。</li>
+      <li>月額プランご契約中であっても、35日間以上連続してオンラインでの契約状態確認（Google Playとの同期）が行われない場合、不正利用防止のため、再度オンラインで有効性が確認されるまで一時的に月額プラン特典が停止される場合があります（なお、このGoogle Playとの同期は、インターネット通信が可能な状態で本アプリを起動すれば自動的に行われるため、ユーザーによる特別な操作は不要です）。また、長期間本アプリを起動しなかった後にオンラインへ復帰した際、未受取の月次付与ベルがある場合は、Google Playでの各月の契約更新日を起算日とする有効期限（180日間）の範囲内で付与され、すでに各更新日から180日を経過している月次分のベルは失効しているため付与されません。</li>
     </ol>
 
-    <h3>第4条（免責事項および知的財産権）</h3>
+    <h3>第4条（AI機能・画像抽出・翻訳機能に関するルールと非返還合意）</h3>
+    <div class="notice-box">
+      <strong>【重要：通信切断・タスクキル・バックグラウンド移行時のベル非返還について】</strong><br>
+      AI処理・画像抽出・翻訳の実行中にアプリを閉じたり通信が切断された場合、すでにAPI通信コストが発生しているため、消費・仮消費されたベルは一切返還されません。
+    </div>
     <ol>
-      <li>本アプリのAI機能による生成結果（校正・要約・加工・翻訳・画像文字抽出等）は外部AIモデルによる自動生成であり、その正確性、完全性、有用性を保証するものではありません。重要な文書については必ずユーザーご自身の責任において確認を行ってください。</li>
-      <li>本アプリの利用、データの消失、通信障害、AI生成結果の利用等によりユーザーまたは第三者に生じた損害について、当方に故意または重過失がある場合を除き、当方は責任を負いません。万一当方が損害賠償責任を負う場合であっても、その賠償額は当該損害が発生した月にユーザーが本アプリに対して実際に支払った利用料金の総額を上限とします。</li>
-      <li>本アプリに関する著作権、商標権その他の知的財産権はすべてFpalStudio™に帰属します。「メモコンシェルジュ™」「MemoConcierge™」および「FpalStudio™」は当方の商標またはトレードマークであり、「© 2026 FpalStudio」として保護されます。</li>
-      <li>本規約は日本法を準拠法とし、本アプリに関連して紛争が生じた場合は、東京地方裁判所を第一審の専属的合意管轄裁判所とします。</li>
+      <li>本アプリの「AIで加工（校正・要約・プロンプト加工）」「画像からのテキスト抽出（および画像描写）」「共有テキストの翻訳」機能は、外部の生成AIサービス（Google Gemini API等）へ対象テキストや画像データを送信して処理を行います。個人情報や機密性の高い情報を入力する場合は、ユーザー自身の責任と判断において実行してください。</li>
+      <li><strong>【文字数上限】：</strong><br>
+        1回の処理におけるAI加工・翻訳・画像抽出の対象文字数および出力文字数には所定の上限（最大10,000文字）があり、上限を超えるテキストは先頭からの所定文字数のみが対象となり、出力が上限に達した場合は文章が途中で終了することがあります。</li>
+      <li><strong>【ベルの消費タイミングと仮消費・差額返還】：</strong>
+        <ul>
+          <li>(1) AI加工および共有テキスト翻訳では、APIリクエスト送信の直前に所定のベルが確定消費されます。</li>
+          <li>(2) 画像からのテキスト抽出では、APIリクエスト送信の直前に所持ベルおよび選択モードに応じた最大上限ベルが一旦仮消費され、正常に抽出が完了した後に、実際の抽出文字数に応じた差額（未使用分）のベルが元の有効期限を維持したまま返還されます。なお、画像から文字が検出されなかった場合（0文字）であっても、画像解析処理の対価として所定の最小単位（10ベル）が消費されます。</li>
+        </ul>
+      </li>
+      <li><strong>【処理中断・通信エラー時のベル非返還（重要）】：</strong><br>
+        <strong>AI処理・画像抽出・翻訳の実行中に、アプリをバックグラウンドへ回す操作、タスクキル、端末の電源オフ、通信の切断（機内モードへの切替や電波不良・タイムアウトを含みます）、またはOSによるアプリの強制停止等が発生した場合、処理は失敗します。この場合、すでにAPIリクエストが送信されサーバーコストが発生しているため、消費または仮消費されたベルは一切返還されません。必ず処理完了まで画面を閉じずにお待ちください。</strong></li>
+      <li>生成AIの出力結果は確率的な推論に基づくものであり、内容の正確性、完全性、妥当性、最新性、および第三者の権利を侵害していないことについて、開発者は一切保証しません。</li>
     </ol>
+
+    <h3>第5条（音声読み上げ機能・バナー広告非表示機能）</h3>
+    <ol>
+      <li>無料プランにおいて、動画広告の視聴または所定のベル（10ベル）消費により解放される音声読み上げ（TTS）の利用可能時間、および所定のベル（30ベル）消費により適用されるバナー広告非表示期間（24時間）は、実行した時点から実時間（システム時計基準）で経過し、本アプリを閉じている間や端末の電源を切っている間も時間は進行します。</li>
+      <li>音声読み上げ機能は端末内にインストールされているTTSエンジンを利用するため、端末の設定や言語データによっては正常に発音されない場合や途中で停止する場合があります。</li>
+    </ol>
+
+    <h3>第6条（禁止事項と不正操作への措置）</h3>
+    <p>ユーザーは、本アプリの利用にあたり以下の行為を行ってはなりません。</p>
+    <ol>
+      <li>端末の時計（日時設定）を意図的に未来や過去へ変更して、ベルの有効期限、バナー広告非表示期間、または音声読み上げ解放時間を不正に操作・延長する行為（本アプリが時計の不整合を検知した場合、有効期限やタイマーは自動的に補正または無効化されます）</li>
+      <li>本アプリのプログラムの改ざん、リバースエンジニアリング、逆コンパイル、逆アセンブル、または不正にベルデータを書き換える行為</li>
+      <li>通信の意図的な遮断等を繰り返してサーバーやAPIへ過度な負荷をかける行為、その他開発者または第三者に不利益・損害を与える行為</li>
+    </ol>
+
+    <h3>第7条（免責事項および損害賠償の制限）</h3>
+    <ol>
+      <li>開発者は、本アプリに事実上または法律上の瑕疵（安全性、信頼性、正確性、完全性、有効性、特定の目的への適合性、セキュリティなどに関する欠陥、エラーやバグ、権利侵害などを含みます）がないことを保証しておりません。</li>
+      <li>開発者は、本アプリの利用または利用不能、テキストデータの消失・破損・文字化け、AI出力結果の利用、外部サービスの障害・仕様変更等によりユーザーに生じた損害について、開発者に故意または重過失がある場合を除き、一切の責任を負いません。</li>
+      <li>法令の適用等により、開発者がユーザーに対して損害賠償責任を負う場合であっても、開発者に故意または重過失がある場合を除き、開発者の賠償責任は、当該損害が発生した月の直近1ヶ月間にユーザーが本アプリにおいて実際に支払った利用料金（有償課金額）の総額（無償利用の場合は0円）を上限とします。</li>
+    </ol>
+
+    <h3>第8条（知的財産権および商標）</h3>
+    <p>本アプリに関する著作権、商標権その他の知的財産権は、すべてFpalStudio™（開発者）または正当な権利を有する第三者に帰属します。「メモコンシェルジュ™」「MemoConcierge™」および「FpalStudio™」は開発者の商標です（© 2026 FpalStudio）。</p>
+
+    <h3>第9条（サービス内容および本規約の変更・終了）</h3>
+    <p>開発者は、API利用料金や為替相場の変動、OSや外部サービスの仕様変更、その他運営上の必要に応じて、ベルの消費レート、各プランの内容、本アプリの機能、または本規約の内容を変更・終了することがあります。</p>
+
+    <h3>第10条（準拠法および管轄裁判所）</h3>
+    <p>本規約の解釈にあたっては日本法を準拠法とし、本アプリに関して紛争が生じた場合には、開発者の所在地を管轄する日本の裁判所（東京地方裁判所）を第一審の専属的合意管轄裁判所とします。</p>
   </section>
 
   <!-- ==================== 日本語：特定商取引法に基づく表記 ==================== -->
@@ -318,7 +367,7 @@
         </tr>
         <tr>
           <th>返品・キャンセルについて</th>
-          <td>デジタルコンテンツおよびアプリ内サービスの性質上、購入手続完了後のお客様都合による返品・交換・キャンセル・返金はお受けできません。また、獲得・購入日から180日を経過したベル、ならびに処理中断時（タスクキル・バックグラウンド移行・通信切断等）に消費されたベルの返還・返金はいたしかねます。</td>
+          <td>デジタルコンテンツおよびアプリ内サービスの性質上、購入手続完了後のお客様都合による返品・交換・キャンセル・返金はお受けできません。また、獲得・購入・付与日から180日を経過したベル、ならびに処理中断時（タスクキル・バックグラウンド移行・通信切断等）に消費されたベルの返還・返金はいたしかねます。</td>
         </tr>
         <tr>
           <th>動作環境</th>
@@ -336,15 +385,19 @@
     <h3>1. Information We Process and Purpose of Use</h3>
     <ul>
       <li><strong>Text and Image Data Submitted for AI Features:</strong><br>
-        When you use the AI processing features of the App (such as text proofreading, summarization, prompt processing, shared text translation, or image text extraction / OCR), the text or image data you select is transmitted via encrypted communication (HTTPS) to the Google Gemini API provided by Google LLC solely to generate and return the requested AI output. We do not store your memo texts or images on our own servers. Furthermore, because the App utilizes a paid Google Cloud / Gemini API billing tier, your submitted data is not used by Google to train its AI models.</li>
+        When you use the AI processing features of the App (proofreading, summarization, prompt processing, shared text translation, or image text extraction / description), the text or image data you select is transmitted via encrypted communication (HTTPS) to the Google Gemini API provided by Google LLC solely to generate and return the requested AI output. We do not store your memo texts or images on our own servers. Furthermore, because the App utilizes a paid Google Cloud / Gemini API billing tier, your submitted data is not used by Google to train its AI models.</li>
+      <li><strong>Location Information ("Insert Current Info" Feature Only):</strong><br>
+        Only when you explicitly select to insert your current address, coordinates, or Google Maps link and tap the "Insert Current Info" button, the App accesses your device's location (GPS) and the OS geocoder to insert that location into your active memo text. Location data is processed strictly on your device at the moment of your request and is never tracked in the background, collected, or transmitted to our servers or third-party ad networks.</li>
+      <li><strong>Text-to-Speech (TTS) and Device Authentication:</strong><br>
+        TTS playback is processed locally on your device using the standard Android TextToSpeech engine. Biometric or screen-lock authentication (used when clearing all history) is handled strictly by the Android OS (BiometricPrompt); we never access or store your biometric or passcode data.</li>
       <li><strong>Advertising IDs and Device Information (Google AdMob):</strong><br>
         We use Google AdMob to display banner and rewarded video advertisements. AdMob may automatically collect your device's Advertising ID, approximate location, and app interaction/crash data for ad delivery and fraud prevention. Please refer to <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google's Advertising Privacy & Terms</a> for details.</li>
       <li><strong>In-App Purchase and Subscription Status:</strong><br>
         We use the Google Play Billing API to verify subscription status and manage in-app currency ("Bells" 🔔). Payment credentials are processed directly by Google Play and are never accessed or stored by us.</li>
     </ul>
 
-    <h3>2. Local Data Storage</h3>
-    <p>Your memos and in-app currency ("Bells") balance and expiration lot records are stored locally on your device. Please note that uninstalling the App or clearing the App's storage in your device settings will permanently delete your local memos and remaining Bells.</p>
+    <h3>2. Local Data Storage and Backup</h3>
+    <p>Your memos, "Bells" balance and expiration lots, bookmarks, history, and settings are stored locally on your device (if Android Auto Backup / Google Backup is enabled on your device, app data may be backed up to your personal Google Drive account for device migration). Uninstalling the App or clearing the App's storage without an active backup will permanently delete your local memos and remaining Bells.</p>
 
     <h3>3. Contact Us</h3>
     <p>If you have any questions regarding this Privacy Policy, please contact us at:<br>
@@ -355,48 +408,57 @@
   <!-- ==================== ENGLISH: Terms of Service ==================== -->
   <section id="terms-en" lang="en">
     <h2>Terms of Service (English)</h2>
-    <p>These Terms of Service ("Terms") govern your use of the application "MemoConcierge™" (Japanese name: メモコンシェルジュ™, the "App") provided by FpalStudio™ ("we," "us," or "our"). By using the App, you agree to these Terms.</p>
+    <p>These Terms of Service ("Terms") govern your use of the application "MemoConcierge™" (Japanese name: メモコンシェルジュ™, the "App") provided by FpalStudio™ ("Developer," "we," "us," or "our"). By using the App, you agree to these Terms.</p>
 
-    <h3>1. In-App Currency ("Bells" 🔔), 180-Day Expiration, and Holding Limits</h3>
+    <h3>1. App Functions, Local Data Management, and User Responsibility</h3>
     <ol>
-      <li><strong>Unit and Usage:</strong> The in-app currency used within the App is called "Bells" (minimum consumption unit: 10 Bells). Watching a rewarded video ad grants 10 Bells (on the charge screen, limited to 20 times per day and available only when holding fewer than 200 Bells; rewarded video viewing from the Text-to-Speech dialog is available at any time without balance or daily limits). Consuming 30 Bells hides banner ads for 24 hours.</li>
-      <li><strong>180-Day Expiration Rule (All Bells):</strong><br>
-        <strong>All Bells—whether acquired through paid purchases (one-time packs, subscriber add-on packs, or monthly subscription grants) or obtained for free (via rewarded video ads)—expire strictly 180 days from the date of acquisition or purchase.</strong><br>
-        Bells are consumed on a First-In, First-Out (FIFO) basis starting from those with the earliest expiration date (if expiration dates are identical, free Bells are consumed first internally). <strong>Any Bells that pass their 180-day expiration date are automatically deleted and cannot be refunded, restored, or compensated under any circumstances.</strong></li>
-      <li><strong>Holding Limits:</strong><br>
-        The maximum balance eligible for purchasing one-time Bell packs is <strong>100,000 Bells</strong> (users holding 99,999 Bells or fewer may purchase up to a 6,000-Bell pack, reaching up to 105,999 Bells; additional one-time purchases are disabled while holding 100,000 Bells or more). The absolute system holding cap, including monthly subscription grants, is <strong>9,999,999 Bells</strong>.</li>
+      <li>The App is provided on an "AS IS" basis as a tool for viewing, editing, and saving text files, managing bookmarks and history, Text-to-Speech (TTS), inserting current time/location info, and AI-assisted text processing, translation, and image text extraction.</li>
+      <li>Due to device memory (RAM) limits, OS process termination (task-killing), battery depletion, storage permission loss, character encoding differences, or network errors, files may occasionally open partially (as incomplete unsaved files) or fail to save properly. Users are solely responsible for regularly backing up important text data to external storage or separate files.</li>
     </ol>
 
-    <h3>2. Bell Consumption and Non-Refund Policy Upon Interruption</h3>
+    <h3>2. In-App Currency ("Bells" 🔔), 180-Day Expiration, and Holding Limits</h3>
+    <ol>
+      <li><strong>Unit and Acquisition:</strong> The App uses "Bells" (minimum unit: 10 Bells). Watching a rewarded video ad grants 10 Bells (on the charge screen, limited to 20 times/day and available only when holding fewer than 200 Bells; rewarded video viewing from the TTS dialog is available at any time without balance or daily limits).</li>
+      <li><strong>Holding Limits:</strong> The maximum balance eligible for purchasing one-time Bell packs is <strong>100,000 Bells</strong> (users holding 99,999 Bells or fewer may purchase up to a 6,000-Bell pack, reaching up to 105,999 Bells; additional one-time purchases are disabled while holding 100,000 Bells or more). Monthly subscription Bell grants can be received even above 100,000 Bells up to the absolute system cap of <strong>9,999,999 Bells</strong>.</li>
+      <li><strong>180-Day Expiration Rule (All Bells):</strong><br>
+        <strong>All Bells—whether acquired through paid purchases, monthly subscription grants, or free rewarded video ads—expire strictly 180 days from the date of acquisition, purchase, or grant</strong> (for monthly subscription grants, the 180-day period starts on the date the monthly renewal billing occurs on Google Play, not the date you open the App to claim them). Bells are consumed on a First-In, First-Out (FIFO) basis starting from the earliest expiration date (if expiration dates are identical, free Bells are consumed first). <strong>Expired Bells are automatically deleted and cannot be restored, refunded, or compensated under any circumstances.</strong></li>
+      <li><strong>No Transfer or Refund:</strong> Except as required by law, Bells cannot be exchanged for cash, refunded, or transferred. We are not liable for any loss of Bells resulting from app uninstallation, clearing app data, device loss/damage, or device migration without using the OS backup feature.</li>
+    </ol>
+
+    <h3>3. Subscriptions, Pricing, Offline Verification, and Cancellation</h3>
+    <ol>
+      <li><strong>Products and Pricing (US / JP):</strong>
+        <ul>
+          <li><strong>Standard Plan (Monthly Subscription):</strong> $2.99/month (¥390/month) — Includes 1,000 Bells/month, permanent banner ad removal, unlimited TTS, and access to Standard add-on Bell packs ($2.49 for 1,000 Bells / $6.99 for 3,000 Bells / $10.99 for 6,000 Bells).</li>
+          <li><strong>Pro Plan (Monthly Subscription):</strong> $6.99/month (¥980/month) — Includes 4,000 Bells/month, permanent banner ad removal, unlimited TTS, and access to Pro add-on Bell packs ($1.99 for 1,000 Bells / $5.49 for 3,000 Bells / $8.49 for 6,000 Bells).</li>
+          <li><strong>General One-Time Bell Packs (For non-subscribers):</strong> $3.49 (1,000 Bells) / $8.99 (3,000 Bells) / $14.99 (6,000 Bells).</li>
+        </ul>
+      </li>
+      <li><strong>Auto-Renewal and Cancellation:</strong> Subscriptions automatically renew each month via Google Play unless canceled at least 24 hours before the renewal date. <strong>Uninstalling the App or not using the device does NOT automatically cancel your subscription.</strong> You must cancel directly via your Google Play Store account settings.</li>
+      <li><strong>Offline Verification (35-Day Rule):</strong> If the App is not connected to the internet to verify subscription status with Google Play for 35 consecutive days or more, subscription benefits may be temporarily suspended until online verification is restored. Unclaimed monthly Bells upon reconnection are granted only within their 180-day validity period measured from each respective Google Play renewal date.</li>
+    </ol>
+
+    <h3>4. AI Features, Bell Consumption, and Non-Refund Policy Upon Interruption</h3>
     <div class="notice-box">
       <strong>[Important: No Refund of Bells on Task-Kill, Backgrounding, or Disconnection]</strong>
     </div>
     <ol>
-      <li><strong>AI Text Processing & Translation (Immediate Pre-Consumption):</strong><br>
-        For AI batch processing (proofreading, summarization, prompt processing) and shared text translation, the required Bells are consumed immediately prior to sending the API request.</li>
-      <li><strong>Image Text Extraction / OCR (Provisional Consumption & Difference Refund):</strong><br>
-        At the start of image text extraction, the maximum estimated Bells are provisionally deducted. Upon completion, the actual Bell cost based on the extracted character count is finalized and any surplus Bells are refunded to their original expiration lot. Even if no text (0 characters) is detected in the image, a <strong>minimum of 10 Bells</strong> is consumed to cover the image analysis processing.</li>
-      <li><strong>No Refund Upon Interruption or Failure:</strong><br>
-        In any of the processes above, <strong>if the process fails or is interrupted because the App moves to the background, the App is closed or force-stopped (task-killed), the device powers off, or network connectivity is lost or unstable during execution, any consumed or provisionally consumed Bells will NOT be refunded.</strong></li>
+      <li><strong>Character Limits:</strong> AI text processing, translation, and image text extraction are limited to a maximum of 10,000 characters per execution.</li>
+      <li><strong>Consumption Timing:</strong> AI batch processing and shared text translation consume the required Bells immediately prior to sending the API request. Image text extraction provisionally deducts the maximum applicable Bells prior to sending the request and refunds any unused difference to the original expiration lot upon completion (a <strong>minimum of 10 Bells</strong> is consumed even if 0 characters are detected).</li>
+      <li><strong>No Refund Upon Interruption or Failure:</strong> <strong>If any AI, translation, or extraction process fails or is interrupted because the App moves to the background, is force-closed (task-killed), the device powers off, or network connectivity is lost or times out, any consumed or provisionally consumed Bells will NOT be refunded.</strong></li>
+      <li><strong>No Warranty on AI Output:</strong> AI outputs are probabilistic and provided without any warranty of accuracy, completeness, or non-infringement.</li>
     </ol>
 
-    <h3>3. Subscriptions, Pricing, and No Refunds</h3>
+    <h3>5. TTS Unlock & Banner Ad Removal Timers and Prohibited Conduct</h3>
     <ol>
-      <li><strong>Products and Pricing (US / JP):</strong>
-        <ul>
-          <li><strong>Standard Plan (Monthly Subscription):</strong> $2.99/month (¥390/month) — Includes 1,000 Bells/month, permanent banner ad removal, unlimited Text-to-Speech (TTS), and access to discounted Standard add-on Bell packs ($2.49 for 1,000 Bells / $6.99 for 3,000 Bells / $10.99 for 6,000 Bells).</li>
-          <li><strong>Pro Plan (Monthly Subscription):</strong> $6.99/month (¥980/month) — Includes 4,000 Bells/month, permanent banner ad removal, unlimited TTS, and access to discounted Pro add-on Bell packs ($1.99 for 1,000 Bells / $5.49 for 3,000 Bells / $8.49 for 6,000 Bells).</li>
-          <li><strong>Standard One-Time Bell Packs (For non-subscribers):</strong> $3.49 (1,000 Bells) / $8.99 (3,000 Bells) / $14.99 (6,000 Bells).</li>
-        </ul>
-      </li>
-      <li><strong>Auto-Renewal and Cancellation:</strong> Subscriptions automatically renew each month unless canceled at least 24 hours before the renewal date via your Google Play Store account settings. Uninstalling the App does not cancel an active subscription.</li>
-      <li><strong>All Sales Final:</strong> Except as required by applicable law, all purchases of subscriptions and Bell packs are final and non-refundable.</li>
+      <li><strong>Real-Time Timer Progression:</strong> Temporary TTS unlock time (unlocked via rewarded ad or 10 Bells) and 24-hour banner ad removal (30 Bells) on the free plan elapse in real time based on the system clock, continuing to count down even while the App is closed or the device is powered off.</li>
+      <li><strong>Prohibited Clock Manipulation:</strong> Intentionally altering your device's date/time settings to manipulate Bell expiration dates or timers is strictly prohibited (if clock tampering is detected, timers and expiration dates may be automatically corrected or invalidated). Reverse engineering or tampering with App data is also prohibited.</li>
     </ol>
 
-    <h3>4. Disclaimer of Warranties and Intellectual Property</h3>
+    <h3>6. Limitation of Liability, Intellectual Property, and Governing Law</h3>
     <ol>
-      <li>AI-generated outputs are provided "AS IS" without warranties of accuracy or completeness. Please verify important content independently.</li>
-      <li>All intellectual property rights in the App belong to FpalStudio™. "MemoConcierge™", "メモコンシェルジュ™", and "FpalStudio™" are trademarks of FpalStudio™.</li>
+      <li>To the maximum extent permitted by law, the Developer shall not be liable for any damages arising from the use or inability to use the App, except in cases of intentional misconduct or gross negligence. Where liability cannot be excluded, the Developer's total liability shall not exceed the total amount of paid fees actually paid by the user in the App during the 1-month period immediately preceding the event giving rise to the claim (¥0 / $0 for free users).</li>
+      <li>All intellectual property rights in the App belong to FpalStudio™. "MemoConcierge™", "メモコンシェルジュ™", and "FpalStudio™" are trademarks of FpalStudio™ (© 2026 FpalStudio).</li>
       <li>These Terms are governed by the laws of Japan, and the Tokyo District Court shall have exclusive jurisdiction over any disputes arising out of or relating to the App.</li>
     </ol>
   </section>
